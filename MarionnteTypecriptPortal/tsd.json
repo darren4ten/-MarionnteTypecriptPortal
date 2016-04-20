@@ -1,0 +1,48 @@
+﻿{
+    "version": "v4",
+    "repo": "borisyankov/DefinitelyTyped",
+    "ref": "master",
+    "path": "typings",
+    "bundle": "typings/tsd.d.ts",
+    "installed": {
+        "underscore/underscore.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "jquery/jquery.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "backbone/backbone-global.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "backbone/backbone.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "backbone.paginator/backbone.paginator.d.ts": {
+            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+        },
+        "backbone-radio/backbone.radio.d.ts": {
+            "commit": "1d9ca5e3be9f9797297e48e537d7432bbb84484f"
+        },
+        "marionette/marionette.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "jqueryui/jqueryui.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "dustjs-linkedin/dustjs-linkedin.d.ts": {
+            "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+        },
+        "tether/tether.d.ts": {
+            "commit": "708609e0764daeb5eb64104af7aca50c520c4e6e"
+        },
+        "requirejs/require.d.ts": {
+            "commit": "c3ab375b371b7b4204adee3b1209baecd81cec02"
+        },
+        "sinon/sinon.d.ts": {
+           "commit": "c3ab375b371b7b4204adee3b1209baecd81cec02"
+        },
+        "jasmine/jasmine.d.ts": {
+           "commit": "c3ab375b371b7b4204adee3b1209baecd81cec02"
+        }
+    }
+}

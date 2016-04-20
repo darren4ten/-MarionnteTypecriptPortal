@@ -1,0 +1,17 @@
+﻿<nav class="wrapper">
+    <ul class="top-nav-link">
+        {#items}
+        <li class="nav-top-bar">
+            <a id="{id}" href='{href}' title1='{desc}' class="ntba occasion"> {text}</a>
+            {?subItems}
+            <ul class="menu-panel">
+                {#subItems}
+                <li><a id="{id}" href='{href}' title1='{desc}'>{text}</a></li>
+                {/subItems}
+            </ul>
+            {/subItems}
+
+        </li>
+        {/items}
+    </ul>
+</nav>

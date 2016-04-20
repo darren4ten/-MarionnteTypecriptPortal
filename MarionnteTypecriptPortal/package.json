@@ -1,0 +1,32 @@
+﻿{
+    "name": "MyPortal",
+    "version": "1.0.0",
+    "description": "MyPortal SPA",
+    "main": "index.html",
+    "dependencies": {
+        "del": "^2.0.2",
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-dust": "^2.0.0",
+        "gulp-flatten": "^0.2.0",
+        "gulp-imagemin": "^2.4.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^1.4.2",
+        "gulp.spritesmith": "^6.0.1",
+        "merge-stream": "^1.0.0",
+        "requirejs": "^2.1.20",
+        "vinyl-buffer": "^1.0.0"
+    },
+    "devDependencies": { "backbone": "1.2.3", "backbone.marionette": "^2.4.4" },
+    "scripts": {
+        "Clean": "gulp.cmd Clean",
+        "Debug": "gulp.cmd Debug",
+        "Release": "gulp.cmd Release",
+        "ReleaseJS": "r.js.cmd -o build-js.js"
+    },
+    "keywords": [
+        "MyPortal Test"
+    ],
+    "author": "Darren",
+    "license": "Darren"
+}
