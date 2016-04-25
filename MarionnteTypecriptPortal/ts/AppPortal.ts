@@ -8,6 +8,7 @@
 import PAM = require('ts/utilities/ParametersManager');
 import MLOC = require('ts/utilities/MessageLocalization');
 import AI = require('ts/views/index/AppView');
+import IM = require("ts/modules/index/IndexModules");
 export class AppPortal extends Marionette.Application {
     private appStarted: boolean;
     private indexAppView: AI.AppView;
@@ -28,6 +29,8 @@ export class AppPortal extends Marionette.Application {
                     console.log("PAM.InsiteContext.Index");
                     this.indexAppView = new AI.AppView();
                     this.indexAppView.render();
+                    var indexModules: IM.IndexModules = new IM.IndexModules();
+                    indexModules.start();
                     console.log("this.portal.index");
                 }; break;
                 default: {

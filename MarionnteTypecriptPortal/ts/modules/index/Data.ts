@@ -32,3 +32,20 @@ export class NavbarItemModel extends Backbone.Model {
         super(attrs, opts);
     }
 }
+
+export class RecommendCollection extends Backbone.PageableCollection<RecommendItemModel> {
+    constructor(attrs?: IRecommendItem[], opts: any = {}) {
+        var extendOpts = _.extend(opts, {
+            model: RecommendItemModel
+        });
+
+        var models: RecommendItemModel[] = _.map(attrs, (r) => {
+            return new RecommendItemModel(r);
+        });
+        super(models, extendOpts);
+
+        this.url = "testRecommends.js?catid=test";
+    }
+
+}
+

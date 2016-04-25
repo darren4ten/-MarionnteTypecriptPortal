@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\icon_tag_new_f721355.png" />
     <Content Include="images\favicon_23d4a98.png" />
     <Content Include="images\favicon-96x96_acf6191.png" />
     <Content Include="images\apple-icon-152x152_5fde678.png" />
@@ -3215,7 +3216,23 @@
     <Content Include="css\less\index\stylesheet.css.map">
       <DependentUpon>stylesheet.css</DependentUpon>
     </Content>
+    <Content Include="Readme.txt" />
+    <Content Include="testNavitems.js" />
     <Content Include="tsd.json" />
+    <Content Include="images\items\fj4xyjs6e.jpg-w720.jpg" />
+    <Content Include="images\items\rg2cnyur1.jpg-w720.jpg" />
+    <Content Include="images\items\gzy1jafb7.jpg-w720.jpg" />
+    <Content Include="images\items\ezlq55lyy.jpg-w720.jpg" />
+    <Content Include="images\items\wtdbdywp6.jpg-w720.jpg" />
+    <Content Include="images\items\0w8bdor7t.jpg-w720.jpg" />
+    <Content Include="images\items\5gj5fmomq.jpg-w720.jpg" />
+    <Content Include="images\items\anbzyoncp.jpg-w720.jpg" />
+    <Content Include="images\items\x0txq0kwg.jpg-w720.jpg" />
+    <Content Include="images\items\tj8bfr1rl.jpg-w720.jpg" />
+    <Content Include="images\items\kgb2vhxof.jpg-w720.jpg" />
+    <Content Include="testRecommends.js" />
+    <Content Include="images\items\ry25e7u8a.jpg-w720.jpg" />
+    <Content Include="images\items\jlqm42hx1.jpg-w720.jpg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -6664,7 +6681,11 @@
     <TypeScriptCompile Include="ts\AppConfig.ts" />
     <TypeScriptCompile Include="ts\AppPortal.d.ts" />
     <TypeScriptCompile Include="ts\AppPortal.ts" />
+    <TypeScriptCompile Include="ts\modules\Constants.ts" />
     <TypeScriptCompile Include="ts\modules\index\Data.ts" />
+    <TypeScriptCompile Include="ts\modules\index\IndexModules.ts" />
+    <TypeScriptCompile Include="ts\modules\index\HeaderModule.ts" />
+    <TypeScriptCompile Include="ts\modules\index\RecommendsModule.ts" />
     <TypeScriptCompile Include="ts\utilities\LocalStorage.ts" />
     <TypeScriptCompile Include="ts\utilities\Logger.ts" />
     <TypeScriptCompile Include="ts\utilities\MessageLocalization.ts" />

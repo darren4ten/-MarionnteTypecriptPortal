@@ -141,4 +141,30 @@ export class ParametersManager {
         ParametersManager.rightHandSpread = rightHandSpread;
     }
 
+    public static getMockupData() {
+      
+        //抓取数据
+        //var items = $(".post-item");
+        //var data = [];
+        //for (var i = 0; i < items.length; i++) {
+        //    var obj = { id: 0, imgUrl: '', title: '', desc: '', url: '', dataUrl: '', shareCount: 0, likeCount: 0, commentCount: 0 };
+        //    var cur = $(items[i]);
+        //    obj.id = cur.find('.icon-like')[0].getAttribute('data-id');
+        //    obj.dataUrl = 'post/' + obj.id;
+        //    var img = cur.find('.pitem-cover')[0].getAttribute('style');
+        //    obj.desc = cur.find('.pitem-content').get(0).innerText;
+        //    obj.url = img.match(/\(.*\)/)[0];
+        //    obj.url = obj.url.substr(1, obj.url.length - 2);
+        //    obj.imgUrl = "images/items/" + obj.url.match(/[0-9]+\/(.*)/)[1];
+        //    obj.title = cur.find('.pitem-title').text();
+        //    obj.shareCount = cur.find(".info-item").get(0).innerText;
+        //    obj.commentCount = cur.find(".info-item").get(1).innerText;
+        //    obj.likeCount = cur.find(".info-item").get(2).innerText;
+        //    data.push(obj);
+        //}
+        //console.log(data);
+        //console.log(JSON.stringify(data));
+
+    }
+
 }

@@ -33,14 +33,8 @@ export class MainLayout extends Marionette.LayoutView < Backbone.Model > {
         //this.getRegion("mainRegion").show(headerLayout);
     }
 
-    public showRecommends() {
+    public showDefaultRecommends() {
         var datas: ID.RecommendItemModel[] = [];
-        for (var i = 0; i < 10; i++) {
-            datas.push(new ID.RecommendItemModel({
-                "id": "" + i, "link": "#testLink" + i, "imgUrl": "#imgUrl" + i,
-                "title": "title " + i, "desc": "desc " + i, "dataUrl": "#dataUrl" + i, "likeCount": 23, "commentCount": 434, "shareCount": 355
-            }));
-        }
         var recommendView = new MR.RecommendsCompositeView(datas);
         this.recommendRegion.show(recommendView);
     }
@@ -49,7 +43,7 @@ export class MainLayout extends Marionette.LayoutView < Backbone.Model > {
         var headerLayout = new MH.HeaderLayout({ model: null });
         this.headerRegion.show(headerLayout);
 
-        this.showRecommends();
+        this.showDefaultRecommends();
 
         var footerLayout = new MF.FooterLayout({ model: null });
         this.footerRegion.show(footerLayout);
