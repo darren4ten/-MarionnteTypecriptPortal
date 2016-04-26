@@ -2,6 +2,7 @@
 import C = require("ts/modules/Constants");
 export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
     private navbarRegion: Marionette.Region;
+    private bannerRegion: Marionette.Region;
     private navbarModel: ID.NavbarItemModel;
     private globalChannel: Backbone.Radio.Channel;
     constructor(options) {
@@ -25,13 +26,13 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
     }
 
     public onShow() {
-      
+
     }
 
 }
 
 export class NavbarItemView extends Marionette.ItemView<Backbone.Model>{
-    constructor(item) {
+    constructor(item: any = {}) {
         this.model = item;
         var extendedOpts = _.extend(item, {
             tagName: 'div',

@@ -6668,6 +6668,7 @@
     <Content Include="node_modules\yauzl\index.js" />
     <Content Include="ts\templates\dust\index\main.footer.html" />
     <Content Include="ts\templates\dust\index\main.header.html" />
+    <Content Include="ts\templates\dust\index\main.banner.html" />
     <Content Include="ts\templates\dust\index\main.header.navbar.html" />
     <Content Include="ts\templates\dust\index\main.html" />
     <Content Include="ts\templates\dust\index\main.recommends.html" />
@@ -6692,6 +6693,7 @@
     <TypeScriptCompile Include="ts\utilities\ParametersManager.ts" />
     <TypeScriptCompile Include="ts\views\index\AppView.ts" />
     <TypeScriptCompile Include="ts\views\index\layouts\Main.Footer.ts" />
+    <TypeScriptCompile Include="ts\views\index\layouts\Main.Banner.ts" />
     <TypeScriptCompile Include="ts\views\index\layouts\Main.Header.ts" />
     <TypeScriptCompile Include="ts\views\index\layouts\Main.Recommends.ts" />
     <TypeScriptCompile Include="ts\views\index\layouts\Main.ts" />

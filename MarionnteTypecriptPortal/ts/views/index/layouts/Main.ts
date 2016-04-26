@@ -1,5 +1,6 @@
 ﻿import MF = require("ts/views/index/Layouts/Main.Footer");
 import MH = require("ts/views/index/Layouts/Main.Header");
+import MB = require("ts/views/index/Layouts/Main.Banner");
 import MR = require("ts/views/index/Layouts/Main.Recommends");
 import ID = require("ts/modules/index/Data");
 export class MainLayout extends Marionette.LayoutView < Backbone.Model > {
@@ -44,6 +45,9 @@ export class MainLayout extends Marionette.LayoutView < Backbone.Model > {
         this.headerRegion.show(headerLayout);
 
         this.showDefaultRecommends();
+
+        var bannerLayout = new MB.BannerLayout(null);
+        this.bannerRegion.show(bannerLayout);
 
         var footerLayout = new MF.FooterLayout({ model: null });
         this.footerRegion.show(footerLayout);

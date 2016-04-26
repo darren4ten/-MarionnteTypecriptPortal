@@ -1,10 +1,10 @@
 ﻿<nav class="wrapper">
     <ul class="top-nav-link">
         {#items}
-        <li class="nav-top-bar">
-            <a id="{id}" href='{href}' title1='{desc}' class="ntba occasion"> {text}</a>
+        <li class="{clz1}">
+            <a id="{id}" href='{href}' title1='{desc}' class="{clz2}"> {text}</a>
             {?subItems}
-            <ul class="menu-panel">
+            <ul class="{clz3}">
                 {#subItems}
                 <li><a id="{id}" href='{href}' title1='{desc}'>{text}</a></li>
                 {/subItems}

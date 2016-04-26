@@ -1,0 +1,28 @@
+﻿import ID = require("ts/modules/index/Data");
+import C = require("ts/modules/Constants");
+export class BannerLayout extends Marionette.LayoutView<Backbone.Model>{
+    private navbarRegion: Marionette.Region;
+    private bannerRegion: Marionette.Region;
+    private navbarModel: ID.NavbarItemModel;
+    private globalChannel: Backbone.Radio.Channel;
+    constructor(options) {
+        super(_.extend({
+            template: 'index.main.banner',
+            tagName: 'div',
+            id: 'headerId',
+            className: '',
+            regions: {
+                bannerRegion: '#bannerRegion'
+            }
+        }, options));
+        this.globalChannel = Backbone.Radio.channel(C.kGlobalChannel);
+      
+    }
+
+    public onShow() {
+
+    }
+
+}
+
+
