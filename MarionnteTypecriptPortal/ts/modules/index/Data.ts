@@ -49,3 +49,56 @@ export class RecommendCollection extends Backbone.PageableCollection<RecommendIt
 
 }
 
+export interface IFilterItem {
+    title: string;
+    clzTitle: string;
+    items: {
+        clzItem: string;
+        channel: string;
+        text: string;
+    }[];
+
+}
+
+export class FilterItem extends Backbone.Model {
+    constructor(attrs: IFilterItem, opt: any = {}) {
+        super(attrs, opt);
+    }
+}
+
+export class FilterItemCollection extends Backbone.Collection<FilterItem> {
+    constructor(attrs: IFilterItem[], opts: any = {}) {
+        var extendsOpt = _.extend(opts, {
+            model: FilterItem
+        });
+        super(attrs, extendsOpt);
+    }
+
+    // 从liwushuo抓取样例数据
+    getData() {
+        //var con = $(".filter-container .filter-class");
+        //var obj = [];
+        //for (var i = 0; i < con.length; i++) {
+        //    var cur = $(con[i]);
+        //    var item = {};
+        //    item.title = '';
+        //    item.clzTitle = cur.attr('class');
+        //    item.items = [];
+        //    var itemsJQ = cur.find('li');
+        //    for (var j = 0; j < itemsJQ.length; j++) {
+        //        var itemLine = {};
+        //        var curItem = $(itemsJQ[j]);
+        //        itemLine.clzItem = curItem.attr('class');
+        //        itemLine.channel = curItem.find('a').data('channel');
+        //        itemLine.text = curItem.find('a').text();
+        //        item.items.push(itemLine);
+        //    }
+        //    cur.find('li').remove();
+        //    item.title = cur.text();
+        //    obj.push(item);
+        //}
+        //console.log(obj);
+        //console.log(JSON.stringify(obj));
+    }
+}
+

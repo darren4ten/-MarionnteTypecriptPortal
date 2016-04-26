@@ -14,6 +14,14 @@ export class HeaderModule extends Marionette.Object {
                 this.globalChannel.request(C.kGlobalShowNavbar, this.navbarModel);
             }
         });
+        this.globalChannel.reply(C.kGlobalRequestBanners, () => {
+            return this.requestBanners();
+        });
+    }
+
+    private requestBanners() {
+        //TODO: Fetch data;
+        return null;
     }
 
 }

@@ -6,6 +6,7 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
     private navbarModel: ID.NavbarItemModel;
     private globalChannel: Backbone.Radio.Channel;
     constructor(options) {
+
         super(_.extend({
             template: 'index.main.header',
             tagName: 'div',
@@ -13,11 +14,20 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
             className: 'leftButtonAction',
             regions: {
                 navbarRegion: '#header-nav'
+            },
+            events: {
+                'click #ntba-home': 'showHome',
+                'click .people': 'showFilters'
             }
-            //events: {
-            //    'click .buttonJobApproveEnable ': 'onClickApproveJobButton',
-            //}
         }, options));
+
+        //this.events = () => {
+        //    return {
+        //        'click #ntba-home': 'showHome',
+        //        'click .people': 'showFilters'
+        //    };
+        //};
+
         this.globalChannel = Backbone.Radio.channel(C.kGlobalChannel);
         this.globalChannel.reply(C.kGlobalShowNavbar, (model: ID.NavbarItemModel) => {
             this.navbarModel = model;
@@ -27,6 +37,16 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
 
     public onShow() {
 
+    }
+
+    private showHome() {
+        this.globalChannel.request(C.kGlobalShowBanners);
+    }
+
+    private showFilters() {
+        this.globalChannel.request(C.kGlobalRequestFilters, (data) => {
+            this.globalChannel.request(C.kGlobalShowFilters,data);
+        });
     }
 
 }

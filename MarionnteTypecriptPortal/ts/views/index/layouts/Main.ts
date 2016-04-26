@@ -18,12 +18,13 @@ export class MainLayout extends Marionette.LayoutView < Backbone.Model > {
         options.regions = {
             mainRegion: ".mainRegion",
             headerRegion: "#headerRegion",
-            bannerRegion: "#bannerRegion",
+            bannerRegion: "#topRegion",
             recommendRegion: "#display-container",
             searchRegion: "search-container",
             relatedSearchRegion: "#related-search",
             footerRegion: "#footerRegion"
         };
+        APortal.addRegions(options.regions);
         super(options);
     }
 

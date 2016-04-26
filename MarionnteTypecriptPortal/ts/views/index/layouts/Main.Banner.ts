@@ -12,15 +12,17 @@ export class BannerLayout extends Marionette.LayoutView<Backbone.Model>{
             id: 'headerId',
             className: '',
             regions: {
-                bannerRegion: '#bannerRegion'
+                bannerRegion: '#topRegion'
             }
         }, options));
         this.globalChannel = Backbone.Radio.channel(C.kGlobalChannel);
-      
+        this.globalChannel.reply(C.kGlobalShowBanners, () => {
+            APortal.getRegion('bannerRegion').show(new BannerLayout(null));
+        });
     }
 
     public onShow() {
-
+        $("#topRegion").prop('class', "banner-wrapper");
     }
 
 }

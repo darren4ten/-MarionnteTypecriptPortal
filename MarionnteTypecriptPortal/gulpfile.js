@@ -121,10 +121,10 @@ gulp.task("templates", function () {
 // Sprite Icons
 
 gulp.task('sprites', function () {
-    var spriteData = gulp.src('images/icons/*.png').pipe(spritesmith({
+    var spriteData = gulp.src('images/icons-retina/*.png').pipe(spritesmith({
         imgName: 'spritesP.png',
         retinaImgName: 'spritesP2.png', // add retina icons
-        retinaSrcFilter: 'images/icons/*@2x.png',
+        retinaSrcFilter: 'images/icons-retina/*@2x.png',
         cssName: 'spritesP.less'
     }));
 
