@@ -17,7 +17,8 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
             },
             events: {
                 'click #ntba-home': 'showHome',
-                'click .people': 'showFilters'
+                'click .people': 'showFilters',
+                'click .menu-panel a': 'showFilters'
             }
         }, options));
 
@@ -45,7 +46,7 @@ export class HeaderLayout extends Marionette.LayoutView<Backbone.Model>{
 
     private showFilters() {
         this.globalChannel.request(C.kGlobalRequestFilters, (data) => {
-            this.globalChannel.request(C.kGlobalShowFilters,data);
+            this.globalChannel.request(C.kGlobalShowFilters, data);
         });
     }
 

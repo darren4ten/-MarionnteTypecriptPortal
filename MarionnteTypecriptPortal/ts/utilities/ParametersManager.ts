@@ -15,11 +15,6 @@ export enum SiteContext {
 export class ParametersManager {
     private static log: L.Logger;
     private static sessionId: string;
-    private static jobId: string;
-    private static customerId: string;
-    private static tokenId: string;
-    private static speId: string;
-    private static isSpread: boolean;
     private static previewMode: string;
     private static siteContext: SiteContext;
 
@@ -61,27 +56,6 @@ export class ParametersManager {
         return ParametersManager.sessionId;
     }
 
-    public static getCustomerId(): string {
-        if (_.isUndefined(ParametersManager.customerId)) {
-            ParametersManager.customerId = ParametersManager.getUrlParam('CustId');
-        }
-        return ParametersManager.customerId;
-    }
-
-    public static getTokenId(): string {
-        if (_.isUndefined(ParametersManager.tokenId)) {
-            ParametersManager.tokenId = ParametersManager.getUrlParam('TokenId');
-        }
-        return ParametersManager.tokenId;
-    }
-
-    public static getJobId(): string {
-        if (_.isUndefined(ParametersManager.jobId)) {
-            ParametersManager.jobId = ParametersManager.getUrlParam('JobId');
-        }
-        return ParametersManager.jobId;
-    }
-
     private static getUrlParam(name: string): any {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -90,12 +64,20 @@ export class ParametersManager {
         return null;
     }
 
-    public static getIsSpread(): boolean {
-        return ParametersManager.isSpread;
+    public static getChannelName(): string {
+        var reg = new RegExp("/#(.*)\?/");
+        var r = window.location.hash.match(reg);
+        if (r != null)
+            return r[1];
+        return null;
     }
 
-    public static setIsSpread(isSpread: boolean): void {
-        ParametersManager.isSpread = isSpread;
+    public static getUrlHashParam(name: string): string {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.hash.substr(1).match(reg);
+        if (r != null)
+            return r[2];
+        return null;
     }
 
     public static getPreviewMode(): string {
@@ -127,18 +109,6 @@ export class ParametersManager {
 
     public static getJobName(): string {
         return ParametersManager.jobName;
-    }
-
-    public static setJobName(jobName: string): void {
-        ParametersManager.jobName = jobName;
-    }
-
-    public static getRightHandSpread(): boolean {
-        return ParametersManager.rightHandSpread;
-    }
-
-    public static setRightHandSpread(rightHandSpread: boolean): void {
-        ParametersManager.rightHandSpread = rightHandSpread;
     }
 
     public static getMockupData() {
