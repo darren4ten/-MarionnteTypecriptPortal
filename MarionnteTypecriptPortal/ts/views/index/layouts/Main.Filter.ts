@@ -1,5 +1,6 @@
 ﻿import ID = require("ts/modules/index/Data");
 import C = require("ts/modules/Constants");
+import PTM = require("ts/utilities/ParametersManager");
 export class FilterCompositeView extends Marionette.CompositeView<ID.FilterItem, FilterItemView>{
     template: string;
     globalChannel: Backbone.Radio.Channel;
@@ -16,8 +17,11 @@ export class FilterCompositeView extends Marionette.CompositeView<ID.FilterItem,
         });
     }
 
-    public onShow() {
-        $("#topRegion").attr('class', 'filterClz')
+    public onRender() {
+        $("#topRegion").attr('class', 'filterClz');
+        var channelName = PTM.ParametersManager.getChannelName();
+        var channel = PTM.ParametersManager.getUrlHashParam('channel');
+        this.$el.find('.filter-container li a[data-channel="' + channel + '"]').parent('li').addClass('active').siblings('li').removeClass('active');
     }
 
     // Remove wrapped div of the container

@@ -25,4 +25,6 @@ export class FilterModule extends Marionette.Object {
         });
     }
 
+   
+
 }
